@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body class="mainest">
+<div class="main1">
+	<div>
+		<h1>Кто из них владеет той самой владеет тетрадью которая убивает?</h1>
+		<h1>У тебя попыток:</h1><h1 class="scoretxt">2</h1>
+		<button class="btn">Перемешать</button>
+	</div>
+	<style type="text/css">
+		.top300{
+			top:300px;
+		}
+		.top700{
+			top:700px;
+		}
+		.top1100{
+			top:1100px;
+		}
+		.left200{
+			left:200px;
+		}
+		.left800{
+			left:800px;
+		}
+		.left1400{
+			left:1400px;
+		}
+		.tr{
+			transition: 0.7s;
+		}
+	</style>
+	<div class="main2">
+		<div class="tr box1 top300 left200" style="position: absolute; height:300px; width:300px;" >
+		<img src="1.jpg" height="300" class="imgwhat1">
+		</div>
+
+		<div class="tr box2 top300 left800" style="position: absolute; height:300px; width:300px;" >
+		<img src="2.jpg" height="300" class="imgwhat2">
+		</div>
+
+		<div class="tr box3 top300 left1400" style="position: absolute; height:300px; width:300px " >
+		<img src="3.jpg" height="300" class="imgwhat3">
+		</div>
+
+		<div class="tr box4 top700 left200" style="position: absolute; height:300px; width:300px;" >
+		<img src="4.jpg" height="300" class="imgwhat4">
+		</div>
+
+		<div class="tr box5 top700 left800" style="position: absolute; height:300px; width:300px; ">
+		<img src="5.jpg" height="300" class="imgwhat5">
+		</div>
+
+		<div class="tr box6 top700 left1400" style="position: absolute; height:300px; width:300px " >
+		<img src="6.jpg" height="300" class="imgwhat6">
+		</div>
+
+		<div class="tr box7 top1100 left200" style="position: absolute; height:300px; width:300px " >
+		<img src="7.jpg" height="300" class="imgwhat7">
+		</div>
+
+		<div class="tr box8 top1100 left800" style="position: absolute; height:300px; width:300px " >
+		<img src="8.png" height="300" class="imgwhat8">
+		</div>
+
+		<div class="tr box9 top1100 left1400" style="position: absolute; height:300px; width:300p;" >
+		<img src="9.jpg" height="300" class="imgwhat9">
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+		let img1top = 300;
+		let img1left = 200;
+
+		let img2top = 300;
+		let img2left = 800;
+
+		let img3top = 300;
+		let img3left = 1400;
+
+		let img4top = 700;
+		let img4left = 200;
+
+		let img5top = 700;
+		let img5left = 800;
+
+		let img6top = 700;
+		let img6left = 1400;
+
+		let img7top = 1100;
+		let img7left = 200;
+
+		let img8top = 1100;
+		let img8left = 800;
+
+		let img9top = 1100;
+		let img9left = 1400;
+
+		let score = 2;
+		document.querySelector(".btn").onclick = function(){
+			img1top=img1top+800;
+			document.querySelector(".box1").style.top = img1top+"px";
+			img1left=img1left+600;
+			document.querySelector(".box1").style.left = img1left+"px";
+
+			img2top=img2top+800;
+			document.querySelector(".box2").style.top = img2top+"px";
+			img2left=img2left-600;
+			document.querySelector(".box2").style.left = img2left+"px";
+
+			img3top=img3top+400;
+			document.querySelector(".box3").style.top = img3top+"px";
+			img3left=img3left-600;
+			document.querySelector(".box3").style.left = img3left+"px";
+
+			img4top=img4top-400;
+			document.querySelector(".box4").style.top = img4top+"px";
+			img4left=img4left+1200;
+			document.querySelector(".box4").style.left = img4left+"px";
+
+			img5top=img5top-400;
+			document.querySelector(".box5").style.top = img5top+"px";
+			img5left=img5left;
+			document.querySelector(".box5").style.left = img5left+"px";
+
+			img6top=img6top-400;
+			document.querySelector(".box6").style.top = img6top+"px";
+			img6left=img6left-1200;
+			document.querySelector(".box6").style.left = img6left+"px";
+
+			img7top=img7top-400;
+			document.querySelector(".box7").style.top = img7top+"px";
+			img7left=img7left+1200;
+			document.querySelector(".box7").style.left = img7left+"px";
+
+			img8top=img8top;
+			document.querySelector(".box8").style.top = img8top+"px";
+			img8left=img8left+600;
+			document.querySelector(".box8").style.left = img8left+"px";
+
+			img9top=img9top-400;
+			document.querySelector(".box9").style.top = img9top+"px";
+			img9left=img9left-1200;
+			document.querySelector(".box9").style.left = img9left+"px";
+
+			document.querySelector(".imgwhat1").src = "what.jpg";
+			document.querySelector(".imgwhat2").src = "what.jpg";
+			document.querySelector(".imgwhat3").src = "what.jpg";
+			document.querySelector(".imgwhat4").src = "what.jpg";
+			document.querySelector(".imgwhat5").src = "what.jpg";
+			document.querySelector(".imgwhat6").src = "what.jpg";
+			document.querySelector(".imgwhat7").src = "what.jpg";
+			document.querySelector(".imgwhat8").src = "what.jpg";
+			document.querySelector(".imgwhat9").src = "what.jpg";
+
+			document.querySelector('.score').innerHTML = score;
+		}
+
+
+
+
+
+
+		document.querySelector(".box1").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box3").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box4").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box5").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box6").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box7").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box8").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+		document.querySelector(".box9").onclick = function(){
+			score=score-1
+			document.querySelector('.scoretxt').innerHTML = score;
+			if (score==0){
+				alert("Не, в следующий раз как-нибудь")
+				document.querySelector(".mainest").style.display = "none";
+			}
+		}
+
+		document.querySelector(".box2").onclick = function(){//pobeda//
+			alert("Молодец, угадал")
+			document.querySelector(".mainest").style.background = "black";
+			document.querySelector(".main").style.display = "none";
+			document.querySelector(".main2").style.display = "none";
+		}
+</script>
+</body>
+</html>
